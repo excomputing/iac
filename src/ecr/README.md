@@ -8,6 +8,7 @@ Elastic Container Registry (ECR)
 
 About [ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html), and interacting with ECR via [aws cli](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecr/index.html)
 
+<br>
 
 ## Interacting
 
@@ -21,11 +22,15 @@ Note that
 
 > $user.name \equiv AWS$, &nbsp; **always**
 
+<br>
+
+**Pull** an image via the command
 
 ```shell
 docker pull {account.identifier}.dkr.ecr.{region.name}.amazonaws.com/{repository.name}:{tag.name}
 ```
 
+<br>
 
 ## Deleting
 
