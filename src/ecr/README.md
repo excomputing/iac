@@ -19,6 +19,10 @@ Note
 aws ecr get-login-password --region {region.name} | docker login --username {user.name} --password-stdin {aws.account.identifier}.dkr.ecr.{region.name}.amazonaws.com
 ```
 
+```shell
+docker pull {account.identifier}.dkr.ecr.{region.name}.amazonaws.com/{repository.name}:{tag.name}
+```
+
 
 ## Deleting
 
