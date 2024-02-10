@@ -12,7 +12,7 @@ About [ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.h
 
 ## Interacting
 
-Foremost, interactions via Amazon CLI (Command Line Interface).  Initially, login via
+Foremost, interactions via Amazon CLI (Command Line Interface).  Initially, [login via](https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html)
 
 ```shell
 aws ecr get-login-password --region {region.name} | docker login --username {user.name} --password-stdin {aws.account.identifier}.dkr.ecr.{region.name}.amazonaws.com
