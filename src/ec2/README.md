@@ -46,13 +46,21 @@ aws ec2 terminate-instances --instance-ids {instance.id} --profile {profile.name
 
 <br>
 
-### Launching
+### Launch Templates
 
-Launch Template
+**Deleting**
 
 ```shell
 aws ec2 delete-launch-template --launch-template-id {launch.template.identifier} --region eu-west-1
 ```
+
+```shell
+aws ec2 delete-launch-template-versions --launch-template-id {launch.template.identifier} \
+  --versions {version.number} --region eu-west-1
+```
+<br>
+
+**Template Sections**
 
 Addendum
 
