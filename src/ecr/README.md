@@ -6,7 +6,7 @@ Elastic Container Registry (ECR)
 
 # Notes
 
-Interacting via [aws cli](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecr/index.html)
+About [ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html), and interacting with ECR via [aws cli](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecr/index.html)
 
 
 ## Deleting
