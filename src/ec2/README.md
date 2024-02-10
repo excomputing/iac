@@ -90,9 +90,7 @@ Interaction with S3 & ECR via EC2 requires a **role** wherein
 * A S3 permission policy attached.
 * An ECR permission [policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/security-iam-awsmanpol.html) attached.
 
-```shell
-docker pull {account.identifier}.dkr.ecr.{region.name}.amazonaws.com/{repository.name}:{tag.name}
-```
+
 
 <br>
 <br>
