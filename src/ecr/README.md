@@ -9,6 +9,17 @@ Elastic Container Registry (ECR)
 About [ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html), and interacting with ECR via [aws cli](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecr/index.html)
 
 
+## Interacting
+
+Note
+
+> $user.name$ &equiv; AWS always
+
+```shell
+aws ecr get-login-password --region {region.name} | docker login --username {user.name} --password-stdin {aws.account.identifier}.dkr.ecr.{region.name}.amazonaws.com
+```
+
+
 ## Deleting
 
 Deleting one or more images via their tags
