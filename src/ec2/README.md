@@ -4,9 +4,11 @@ Notes
 
 <br>
 
-# Elastic Compute Container (EC2)
+## Elastic Compute Container (EC2)
 
-## Connecting
+<br>
+
+### Connecting
 
 <span style="margin-bottom:5px; margin-top:1px; color:#ffffff"></span>
 
@@ -24,7 +26,7 @@ Ensure you have a [key pair pem (privacy enhanced mail) certificate file](https:
 
 <br>
 
-## Describing
+### Describing
 
 Describe an account's EC2 instances
 
@@ -34,7 +36,7 @@ aws ec2 describe-instances --profile {profile.name}
 
 <br>
 
-## Terminating
+### Terminating
 
 Terminate an instance
 
@@ -44,7 +46,7 @@ aws ec2 terminate-instances --instance-ids {instance.id} --profile {profile.name
 
 <br>
 
-## Launching
+### Launching
 
 Launch Template
 
@@ -72,7 +74,7 @@ ln -sf /usr/share/zoneinfo/GMT /etc/localtime
 
 <br>
 
-## EC2, S3, ECR
+### EC2, S3, ECR
 
 Interaction with S3 & ECR via EC2 requires a **role** wherein
 
