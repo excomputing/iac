@@ -62,6 +62,8 @@ aws ec2 delete-launch-template-versions --launch-template-id {launch.template.id
 
 **Template Sections**
 
+* [Creating a Launch Template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html)
+
 Addendum
 
 ```shell
