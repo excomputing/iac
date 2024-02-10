@@ -1,12 +1,10 @@
 <br>
 
-Notes
+**Elastic Compute Container (EC2)**
 
 <br>
 
-## Elastic Compute Container (EC2)
-
-<br>
+## Interacting
 
 ### Connecting
 
@@ -36,7 +34,22 @@ aws ec2 describe-instances --profile {profile.name}
 
 <br>
 
-### Terminating
+### EC2, S3, ECR
+
+Interacting with S3 & ECR via EC2 requires a **role** wherein
+
+* EC2 requests services on our behalf.
+* A S3 permission policy attached.
+* An ECR permission [policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/security-iam-awsmanpol.html) attached.
+
+<br>
+
+## Launch, List, Terminate
+
+* [Reference](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html)
+
+
+### Terminate
 
 Terminate an instance
 
@@ -81,18 +94,6 @@ sudo usermod -a -G docker ec2-user
 echo '"ZONE=\"GMT\""' > /etc/sysconfig/clock
 ln -sf /usr/share/zoneinfo/GMT /etc/localtime
 ```
-
-<br>
-
-### EC2, S3, ECR
-
-Interaction with S3 & ECR via EC2 requires a **role** wherein
-
-* EC2 requests services on our behalf.
-* A S3 permission policy attached.
-* An ECR permission [policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/security-iam-awsmanpol.html) attached.
-
-
 
 <br>
 <br>
