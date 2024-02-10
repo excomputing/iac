@@ -11,13 +11,16 @@ About [ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.h
 
 ## Interacting
 
-Note
-
-> $user.name$ &equiv; AWS always
+Foremost, interactions via Amazon CLI (Command Line Interface).  Initially, login via
 
 ```shell
 aws ecr get-login-password --region {region.name} | docker login --username {user.name} --password-stdin {aws.account.identifier}.dkr.ecr.{region.name}.amazonaws.com
 ```
+
+Note that
+
+> $user.name \equiv AWS$, &nbsp; **always**
+
 
 ```shell
 docker pull {account.identifier}.dkr.ecr.{region.name}.amazonaws.com/{repository.name}:{tag.name}
