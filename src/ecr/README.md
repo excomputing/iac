@@ -29,6 +29,16 @@ aws ecr batch-delete-image \
      --image-ids imageDigest={image.digest}
 ```
 
+<br>
+
+Deleting multiple images at a time via their _image digest_
+
+```shell
+aws ecr batch-delete-image \
+     --repository-name {repository.name} \
+     --image-ids imageDigest={image.digest} imageDigest={image.digest}
+```
+
 
 <br>
 <br>
