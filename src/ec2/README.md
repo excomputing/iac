@@ -22,7 +22,7 @@ Programmers may [connect to an instance](https://docs.aws.amazon.com/AWSEC2/late
 
 
 * instance-user-name: ec2-user
-* instance-public-dns-name: {internet.protocol.address}.{region.name}.compute.amazonaws.com
+* instance-public-dns-name: ec2-{internet.protocol.address}.{region.name}.compute.amazonaws.com
 
 wherein `dns` denotes [domain name system](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html); [more about protocol addresses](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html).  Ensure you have a [key pair pem (privacy enhanced mail) certificate file](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html).
 
