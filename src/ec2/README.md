@@ -122,6 +122,7 @@ Study the sample template [template.template.json](/src/ec2/0001/template.templa
 |{amazon.machine.image.identifier}|The [identification code of an amazon machine image (AMI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html).|
 |{instance.type.code}|The [instance type](https://aws.amazon.com/ec2/instance-types/), i.e., hardware, identifier; [more](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html).|
 |{key.pair.name}|The name of a [key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html); [creating key pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html).|
+|{availability.zone}|A zone of a region, e.g., `eu-west-1a` is a zone of region `eu-west-1`.  For more details visit [*regions, availability zones, local zones*](eu-west-1a) & [*amazon web services service endpoints*](https://docs.aws.amazon.com/general/latest/gr/rande.html)|
 
 <br>
 
