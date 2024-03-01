@@ -2,6 +2,8 @@
 
 **Elastic Compute Container (EC2)**
 
+* [Reference](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html)
+
 <br>
 
 ## Interacting
@@ -46,8 +48,21 @@ Interacting with S3 & ECR via EC2 requires a **role** wherein
 
 ## Launch, List, Terminate
 
-* [Reference](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html)
+<br>
 
+
+The most efficient launch approach is
+
+```shell
+aws ec2 run-instances --user-data file://src/ec2/0001/data.txt --launch-template LaunchTemplateId={lanch.template.identier}
+```
+
+whereby
+
+* --user-data ...
+* --launch-template ...
+
+<br>
 
 ### Terminate
 
