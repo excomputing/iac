@@ -2,7 +2,8 @@
 
 **Elastic Compute Container (EC2)**
 
-* [Reference](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html)
+* [Introducing Launching, Listing, Terminating](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html)
+* [Launching Instances](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/run-instances.html)
 
 <br>
 
@@ -101,7 +102,7 @@ A launch template is either created
 
 * [via an existing instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#create-launch-template-from-instance).  
 
-In the case of the latter, the command
+In the case of the latter, [the command](https://docs.aws.amazon.com/cli/latest/reference/ec2/get-launch-template-data.html)
 
 ```shell
 aws ec2 get-launch-template-data --instance-id {instance.identifier} --query "LaunchTemplateData" >> instance.json
