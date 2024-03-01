@@ -59,6 +59,18 @@ aws ec2 terminate-instances --instance-ids {instance.id} --profile {profile.name
 
 <br>
 
+### Launch Instances
+
+An example
+
+```shell
+aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro \
+  --key-name {key-pair-name} --security-group-ids sg-xxxxxxxx --subnet-id subnet-xxxxxxxx
+```
+
+
+<br>
+
 ### Launch Templates
 
 [Creating](docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html)
