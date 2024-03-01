@@ -105,10 +105,10 @@ A launch template is either created
 In the case of the latter, [the command](https://docs.aws.amazon.com/cli/latest/reference/ec2/get-launch-template-data.html)
 
 ```shell
-aws ec2 get-launch-template-data --instance-id {instance.identifier} --query "LaunchTemplateData" >> instance.json
+aws ec2 get-launch-template-data --instance-id {instance.identifier} --query "LaunchTemplateData" >> template.json
 ```
 
-creates a starting launch template named `instance.json` via existing instance `--instance-id ...`.  A launch template is [deleted](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/delete-launch-template.html) via the command
+creates a starting launch template named `template.json` via existing instance `--instance-id ...`.  A launch template is [deleted](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/delete-launch-template.html) via the command
 
 ```shell
 aws ec2 delete-launch-template --launch-template-id {launch.template.identifier} --region eu-west-1
