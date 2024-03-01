@@ -97,9 +97,9 @@ ln -sf /usr/share/zoneinfo/GMT /etc/localtime
 
 ### Launch Template
 
-A launch template is either created
+A launch template is either [created](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html)
 
-* [from scratch](docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html)
+* [from scratch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#create-launch-template-define-parameters)
 
 * [via an existing instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#create-launch-template-from-instance).  
 
