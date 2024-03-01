@@ -64,6 +64,28 @@ whereby
 
 <br>
 
+### User Data
+
+Outline extra linux installations via `data.txt`.  An example 
+
+```bash
+#!/bin/bash
+sudo yum update -y
+
+# docker
+sudo yum install -y docker
+sudo service docker start
+
+# In order to use docker commands without 'sudo'
+sudo usermod -a -G docker ec2-user
+
+# time
+echo '"ZONE=\"GMT\""' > /etc/sysconfig/clock
+ln -sf /usr/share/zoneinfo/GMT /etc/localtime
+```
+
+<br>
+
 ### Terminate
 
 Terminate an instance
@@ -118,21 +140,7 @@ aws ec2 delete-launch-template-versions --launch-template-id {launch.template.id
 
 Addendum
 
-```shell
-#!/bin/bash
-sudo yum update -y
 
-# docker
-sudo yum install -y docker
-sudo service docker start
-
-# In order to use docker commands without 'sudo'
-sudo usermod -a -G docker ec2-user
-
-# time
-echo '"ZONE=\"GMT\""' > /etc/sysconfig/clock
-ln -sf /usr/share/zoneinfo/GMT /etc/localtime
-```
 
 <br>
 <br>
