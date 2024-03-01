@@ -1,0 +1,75 @@
+{
+    "EbsOptimized": false,
+    "IamInstanceProfile": {
+        "Arn": "{amazon.resource.name}"
+    },
+    "BlockDeviceMappings": [
+        {
+            "DeviceName": "/dev/xvda",
+            "Ebs": {
+                "Encrypted": false,
+                "DeleteOnTermination": true,
+                "Iops": 3000,
+                "VolumeSize": 29,
+                "VolumeType": "gp3",
+                "Throughput": 125
+            }
+        }
+    ],
+    "NetworkInterfaces": [
+        {
+            "AssociatePublicIpAddress": true,
+            "DeleteOnTermination": true,
+            "Description": "",
+            "DeviceIndex": 0,
+            "Groups": [
+                "{security.group.identifier}"
+            ],
+            "InterfaceType": "interface",
+            "Ipv6Addresses": [],
+            "SubnetId": "{subnet.identifier}",
+            "NetworkCardIndex": 0
+        }
+    ],
+    "ImageId": "{amazon.machine.image.identifier}",
+    "InstanceType": "{instance.type.code}",
+    "KeyName": "{key.pair.name}",
+    "Monitoring": {
+        "Enabled": false
+    },
+    "Placement": {
+        "AvailabilityZone": "{availability.zone}",
+        "GroupName": "",
+        "Tenancy": "default"
+    },
+    "DisableApiTermination": false,
+    "InstanceInitiatedShutdownBehavior": "terminate",
+    "CreditSpecification": {
+        "CpuCredits": "standard"
+    },
+    "CapacityReservationSpecification": {
+        "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+        "Configured": false
+    },
+    "MetadataOptions": {
+        "HttpTokens": "required",
+        "HttpPutResponseHopLimit": 2,
+        "HttpEndpoint": "enabled",
+        "HttpProtocolIpv6": "disabled",
+        "InstanceMetadataTags": "disabled"
+    },
+    "EnclaveOptions": {
+        "Enabled": false
+    },
+    "PrivateDnsNameOptions": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": false,
+        "EnableResourceNameDnsAAAARecord": false
+    },
+    "MaintenanceOptions": {
+        "AutoRecovery": "default"
+    },
+    "DisableApiStop": false
+}
