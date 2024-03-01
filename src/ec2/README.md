@@ -26,7 +26,7 @@ The format of the latter is usually of the form
 
 Ensure you have a [key pair pem (privacy enhanced mail) certificate file](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html).
 
-<br>
+
 
 ### Describing
 
@@ -36,7 +36,7 @@ Describe an account's EC2 instances
 aws ec2 describe-instances --profile {profile.name}
 ```
 
-<br>
+
 
 ### EC2, S3, ECR
 
@@ -50,7 +50,6 @@ Interacting with S3 & ECR via EC2 requires a **role** wherein EC2 requests servi
 ## Launch
 
 <br>
-
 
 A simple launch example
 
