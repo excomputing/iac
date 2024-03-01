@@ -61,7 +61,19 @@ aws ec2 terminate-instances --instance-ids {instance.id} --profile {profile.name
 
 ### Launch Templates
 
-**Deleting**
+[Creating](docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html)
+
+Start with [an existing instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-launch-template.html#create-launch-template-from-instance).  Via
+
+```shell
+aws ec2 get-launch-template-data --instance-id {instance.id} --query "LaunchTemplateData" >> instance.json
+```
+
+acquire an editable launch template structure.
+
+<br>
+
+[Deleting](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/delete-launch-template.html)
 
 ```shell
 aws ec2 delete-launch-template --launch-template-id {launch.template.identifier} --region eu-west-1
