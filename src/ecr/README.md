@@ -20,7 +20,7 @@ aws ecr get-login-password --region {region.name} | docker login --username {use
 
 Note that
 
-> $user.name \equiv AWS$, &nbsp; **always**
+> $user.name = AWS$, &nbsp; **always**
 
 <br>
 
