@@ -44,6 +44,17 @@
     },
     "DisableApiTermination": false,
     "InstanceInitiatedShutdownBehavior": "terminate",
+    "TagSpecifications": [
+        {
+            "ResourceType": "instance",
+            "Tags": [
+                {
+                    "Key": "cost",
+                    "Value": "free tier"
+                }
+            ]
+        }
+    ],
     "CreditSpecification": {
         "CpuCredits": "standard"
     },
