@@ -121,7 +121,7 @@ Study the sample template [template.template.json](/src/ec2/0001/template.templa
 |{subnet.identifier}|A subnet identification code; about [subnets](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html), additionally study the [virtual private cloud](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) pages.|
 |{amazon.machine.image.identifier}|The [identification code of an amazon machine image (AMI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html).|
 |{instance.type.code}|The [instance type](https://aws.amazon.com/ec2/instance-types/), i.e., hardware, identifier; [more](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html).|
-|{key.pair.name}|The key pair name; [creating key pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html).|
+|{key.pair.name}|The name of a [key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html); [creating key pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html).|
 
 <br>
 
