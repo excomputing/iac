@@ -4,6 +4,7 @@
 
 * [Introducing Launching, Listing, Terminating](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html)
 * [Launching Instances](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/run-instances.html)
+* [Amazon Machine Images](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html)
 
 <br>
 
@@ -108,7 +109,23 @@ In the case of the latter, [the command](https://docs.aws.amazon.com/cli/latest/
 aws ec2 get-launch-template-data --instance-id {instance.identifier} --query "LaunchTemplateData" >> template.json
 ```
 
-creates a starting launch template named `template.json` via existing instance `--instance-id ...`.  A launch template is [deleted](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/delete-launch-template.html) via the command
+creates a starting launch template named `template.json` via existing instance `--instance-id ...`.  
+
+
+<br>
+
+Study the sample template [template.template.json](/src/ec2/0001/template.template.json)
+
+|variable|function|
+|:---|:---|
+|{amazon.resource.name}|The instance profile, which has the required policies for interacting with the Amazon Web Services assets that a task will interact with.|
+|{security.group.identifier}|The [security group identification code](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html) of a [virtual private cloud](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)|
+|{subnet.identifier}|A subnet identification code; about [subnets](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html), additionally study the [virtual private cloud](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) pages.|
+|{amazon.machine.image.identifier}|The [identification code of an amazon machine image (AMI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html).|
+
+<br>
+
+A launch template is [deleted](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/delete-launch-template.html) via the command
 
 ```shell
 aws ec2 delete-launch-template --launch-template-id {launch.template.identifier} --region eu-west-1
