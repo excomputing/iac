@@ -33,6 +33,7 @@ The next sections describe
 
 
 <br>
+<br>
 
 ### Launch Template
 
@@ -81,7 +82,6 @@ aws ec2 delete-launch-template-versions --launch-template-id {launch.template.id
 ```
 
 <br>
-
 <br>
 
 ### User Data
@@ -104,7 +104,7 @@ echo '"ZONE=\"GMT\""' > /etc/sysconfig/clock
 ln -sf /usr/share/zoneinfo/GMT /etc/localtime
 ```
 
-
+<br>
 <br>
 
 ## Interacting
@@ -125,7 +125,7 @@ Programmers may [connect to an instance](https://docs.aws.amazon.com/AWSEC2/late
 
 wherein `dns` denotes [domain name system](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html); [more about protocol addresses](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html).  Ensure you have a [key pair pem (privacy enhanced mail) certificate file](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html).
 
-
+<br>
 
 ### Describing
 
@@ -135,7 +135,7 @@ Describe an account's EC2 instances
 aws ec2 describe-instances --profile {profile.name}
 ```
 
-
+<br>
 
 ### EC2, S3, ECR
 
@@ -144,11 +144,12 @@ Interacting with S3 & ECR via EC2 requires a **role** wherein EC2 requests servi
 * A S3 (Simple Storage Service) permission policy is attached.
 * An ECR (Elastic Container Registry) permission [policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/security-iam-awsmanpol.html) is attached.
 
+
+<br>
 <br>
 
 
-
-## Terminate
+## Terminating
 
 Terminate an instance
 
@@ -156,7 +157,7 @@ Terminate an instance
 aws ec2 terminate-instances --instance-ids {instance.identifier} --profile {profile.name}
 ```
 
-
+<br>
 <br>
 
 ## EC2 Instance Connect Endpoint & EC2 Instances
