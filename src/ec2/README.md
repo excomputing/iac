@@ -104,7 +104,7 @@ A launch template is either [created](https://docs.aws.amazon.com/AWSEC2/latest/
 In the case of the latter, [the command](https://docs.aws.amazon.com/cli/latest/reference/ec2/get-launch-template-data.html)
 
 ```shell
-aws ec2 get-launch-template-data --instance-id {instance.identifier} --query "LaunchTemplateData" >> template.json
+aws ec2 get-launch-template-data --instance-id {instance.identifier} --query "LaunchTemplateData" >> template.private.json
 ```
 
 creates a starting launch template named `template.json` via existing instance `--instance-id ...`.  
@@ -147,6 +147,57 @@ Terminate an instance
 
 ```shell
 aws ec2 terminate-instances --instance-ids {instance.identifier} --profile {profile.name}
+```
+
+
+<br>
+
+## EC2 Instance Connect Endpoint & EC2 Instances
+
+[EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-instance-connect-endpoint.html)
+
+<br>
+
+### Security Groups 
+
+[Security Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/eice-security-groups.html)
+
+1. The _EC2 Instance Connect Endpoint_ Security Group
+2. The _Instance_ Security Group
+
+<br>
+
+### Endpoint
+
+#### Creating
+
+```bash
+aws ec2 create-instance-connect-endpoint --region eu-west-1 --subnet-id {subnet.identifier}
+```
+
+
+#### Describing
+
+Describing an EICE (EC2 Instance Connect Endpoint) via its identifier
+
+```bash
+aws ec2 describe-instance-connect-endpoints --region eu-west-1 --instance-connect-endpoint-ids {eice.identifier}
+```
+
+<br>
+
+### EC2 Machine
+
+Launch an EC2 machine that depends on the endpoint.  Subsequently, connect via
+
+```bash
+ssh -i machines.pem ec2-user@{internet.protocol} -o ProxyCommand='aws ec2-instance-connect open-tunnel --instance-id {instance.identifier}'
+```
+
+List the machine's details via
+
+```bash
+cat /etc/os-release
 ```
 
 <br>
