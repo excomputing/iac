@@ -7,7 +7,7 @@ Infrastructure as Code & Amazon Web Services
 
 # Introduction
 
-The Amazon Web Services CLI (Command Line Interface) tool enables programmatic interaction with <abbr title="Amazon Web Services">AWS</abbr> (Amazon Web Services).  The programmatic interaction illustrations within this repository depend on AWS CLI, hence AWS CLI installation is necessary.
+The [Amazon Web Services CLI (Command Line Interface)](https://aws.amazon.com/cli/) tool enables programmatic interaction with <abbr title="Amazon Web Services">AWS</abbr> (Amazon Web Services).  The programmatic interaction illustrations within this repository depend on AWS CLI, hence AWS CLI installation is necessary.
 
 <br>
 
