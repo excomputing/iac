@@ -73,21 +73,21 @@ Study the sample template [template.template.json](/src/ec2/0001/template.templa
 |{amazon.machine.image.identifier}|The [identification code of an amazon machine image (AMI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html).|
 |{instance.type.code}|The [instance type](https://aws.amazon.com/ec2/instance-types/), i.e., hardware, identifier; [more](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html).|
 |{key.pair.name}|The name of a [key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html); [creating key pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html).|
-|{availability.zone}|A zone of a region, e.g., `eu-west-1a` is a zone of region `eu-west-1`.  For more details visit [*regions, availability zones, local zones*](eu-west-1a) & [*amazon web services service endpoints*](https://docs.aws.amazon.com/general/latest/gr/rande.html)|
+|{availability.zone}|A zone of a region, e.g., `eu-west-1a` is a zone of region `eu-west-1`.  For more details visit [*regions, availability zones, local zones*](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) & [*amazon web services service endpoints*](https://docs.aws.amazon.com/general/latest/gr/rande.html)|
 
 <br>
 
 A launch template is [deleted](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/delete-launch-template.html) via the command
 
 ```shell
-aws ec2 delete-launch-template --launch-template-id {launch.template.identifier} --region eu-west-1
+aws ec2 delete-launch-template --launch-template-id {launch.template.identifier} --region {region.code}
 ```
 
 or similarly
 
 ```shell
 aws ec2 delete-launch-template-versions --launch-template-id {launch.template.identifier} \
-  --versions {version.number} --region eu-west-1
+  --versions {version.number} --region {region.code}
 ```
 
 <br>
@@ -134,7 +134,7 @@ ln -sf /usr/share/zoneinfo/GMT /etc/localtime
     <td></td>
   <tr>
     <td>0003</td> 
-    <td>Automatically shuts down  7 minutes after launch; study <a href="0003/data.txt">data.txt</a></td>
+    <td>Automatically shuts down $13$ minutes after launch; study <a href="0003/data.txt">data.txt</a></td>
   <tr>
     <td>0004</td> 
     <td>Similar to <b>0003</b>, but without an automatic shut down setting.</td>
@@ -219,7 +219,7 @@ aws ec2 terminate-instances --instance-ids {instance.identifier} --profile {prof
 Creating an [EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-instance-connect-endpoint.html)
 
 ```bash
-aws ec2 create-instance-connect-endpoint --region eu-west-1 --subnet-id {subnet.identifier}
+aws ec2 create-instance-connect-endpoint --region {region.code} --subnet-id {subnet.identifier}
 ```
 
 #### Describing
@@ -227,7 +227,7 @@ aws ec2 create-instance-connect-endpoint --region eu-west-1 --subnet-id {subnet.
 Describing an EICE (EC2 Instance Connect Endpoint) via its identifier
 
 ```bash
-aws ec2 describe-instance-connect-endpoints --region eu-west-1 --instance-connect-endpoint-ids {eice.identifier}
+aws ec2 describe-instance-connect-endpoints --region {region.code} --instance-connect-endpoint-ids {eice.identifier}
 ```
 
 <br>
