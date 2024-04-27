@@ -60,6 +60,8 @@ aws ec2 get-launch-template-data --instance-id {instance.identifier} --query "La
 
 creates a skeleton launch template named `template.json` via the instance identifier of an existing instance.  Study the sample template [iac.json](0003/iac.json), the variables therein are briefly explained below.
 
+<br>
+
 <table style="width: 65%; border: 0; border-spacing: 5px; margin-left: 35px">
   <colgroup>
       <col span="1" style="width: 23.5%;">
