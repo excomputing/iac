@@ -63,7 +63,7 @@ creates a starting launch template named `template.json` via the instance identi
 
 <br>
 
-Study the sample template [template.template.json](/src/ec2/0001/template.template.json)
+Study the sample template [iac.json](0003/iac.json)
 
 |variable|function|
 |:---|:---|
@@ -74,6 +74,58 @@ Study the sample template [template.template.json](/src/ec2/0001/template.templa
 |{instance.type.code}|The [instance type](https://aws.amazon.com/ec2/instance-types/), i.e., hardware, identifier; [more](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html).|
 |{key.pair.name}|The name of a [key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html); [creating key pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html).|
 |{availability.zone}|A zone of a region, e.g., `eu-west-1a` is a zone of region `eu-west-1`.  For more details visit [*regions, availability zones, local zones*](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) & [*amazon web services service endpoints*](https://docs.aws.amazon.com/general/latest/gr/rande.html)|
+
+
+
+<table style="width: 65%; border: 0; border-spacing: 5px; margin-left: 35px">
+  <colgroup>
+      <col span="1" style="width: 23.5%;">
+      <col span="1" style="width: 49.5%;">
+  </colgroup>
+  <thead><tr style="text-align: left"><th>variable</th><th>function</th></tr></thead>
+  <tr>
+    <td>{amazon.resource.name}</td> 
+    <td>The instance profile, which has the required policies for interacting with the Amazon Web Services assets that a task will interact with.</td>
+  <tr>
+  <tr>
+    <td>{security.group.identifier}</td> 
+    <td>The <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html">security group identification code</a> of a <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">virtual private cloud</a></td>
+  <tr>
+    <td>{subnet.identifier}</td> 
+    <td>A subnet identification code; about <a href="https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html">subnets</a>, additionally study the <a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html">virtual private cloud</a> pages.</td>
+  <tr>
+    <td>{amazon.machine.image.identifier}</td> 
+    <td>The <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html">identification code of an amazon machine image (AMI)</a>.</td>
+  </tr>
+  <tr>
+    <td>{instance.type.code}</td> 
+    <td>The <a href="https://aws.amazon.com/ec2/instance-types/">instance type</a>, i.e., hardware, identifier; <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">more</a>.</td>
+  </tr>
+  <tr>
+    <td>{key.pair.name}</td> 
+    <td>The name of a <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">key pair</a>; <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html">creating key pairs</a>.</td>
+  </tr>
+  <tr>
+    <td>{availability.zone}</td> 
+    <td>A zone of a region, e.g., <b>eu-west-1a</b> is a zone of region <b>eu-west-1</b>.  For more details visit <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html"><i>regions, availability zones, local zones</i></a> & <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html"><i>amazon web services service endpoints</i></a></td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br>
 
