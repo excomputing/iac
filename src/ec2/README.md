@@ -158,12 +158,12 @@ aws ec2 terminate-instances --instance-ids {instance.identifier} --profile {prof
 
 ## EC2 Instance Connect Endpoint & EC2 Instances
 
-[EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-instance-connect-endpoint.html)
-
 > [!NOTE]
 > In Progress
 
 <br>
+
+[EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-instance-connect-endpoint.html)
 
 ### Security Groups 
 
