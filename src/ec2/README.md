@@ -60,22 +60,9 @@ aws ec2 get-launch-template-data --instance-id {instance.identifier} --query "La
 
 creates a starting launch template named `template.json` via the instance identifier of an existing instance.  
 
-
 <br>
 
 Study the sample template [iac.json](0003/iac.json)
-
-|variable|function|
-|:---|:---|
-|{amazon.resource.name}|The instance profile, which has the required policies for interacting with the Amazon Web Services assets that a task will interact with.|
-|{security.group.identifier}|The [security group identification code](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html) of a [virtual private cloud](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)|
-|{subnet.identifier}|A subnet identification code; about [subnets](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html), additionally study the [virtual private cloud](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) pages.|
-|{amazon.machine.image.identifier}|The [identification code of an amazon machine image (AMI)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html).|
-|{instance.type.code}|The [instance type](https://aws.amazon.com/ec2/instance-types/), i.e., hardware, identifier; [more](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html).|
-|{key.pair.name}|The name of a [key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html); [creating key pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html).|
-|{availability.zone}|A zone of a region, e.g., `eu-west-1a` is a zone of region `eu-west-1`.  For more details visit [*regions, availability zones, local zones*](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) & [*amazon web services service endpoints*](https://docs.aws.amazon.com/general/latest/gr/rande.html)|
-
-
 
 <table style="width: 65%; border: 0; border-spacing: 5px; margin-left: 35px">
   <colgroup>
@@ -110,22 +97,6 @@ Study the sample template [iac.json](0003/iac.json)
     <td>A zone of a region, e.g., <b>eu-west-1a</b> is a zone of region <b>eu-west-1</b>.  For more details visit <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html"><i>regions, availability zones, local zones</i></a> & <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html"><i>amazon web services service endpoints</i></a></td>
   </tr>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <br>
 
