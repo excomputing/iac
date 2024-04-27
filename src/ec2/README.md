@@ -19,10 +19,6 @@
 <br>
 <br>
 
-
-
-
-
 ## Launch
 
 <br>
@@ -115,6 +111,37 @@ sudo usermod -a -G docker ec2-user
 echo '"ZONE=\"GMT\""' > /etc/sysconfig/clock
 ln -sf /usr/share/zoneinfo/GMT /etc/localtime
 ```
+
+<br>
+
+### Examples
+
+> [!NOTE]
+> In Progress
+
+<table style="width: 65%; border: 0; border-spacing: 5px; margin-left: 35px">
+  <colgroup>
+      <col span="1" style="width: 23.5%;">
+      <col span="1" style="width: 43.5%;">
+  </colgroup>
+  <thead><tr style="text-align: left"><th>example</th><th>notes</th></tr></thead>
+  <tr>
+    <td>0001</td> 
+    <td></td>
+  <tr>
+  <tr>
+    <td>0002</td> 
+    <td></td>
+  <tr>
+    <td>0003</td> 
+    <td>Automatically shuts down  7 minutes after launch; study <a href="src/ec2/0003/data.txt">data.txt</a></td>
+  <tr>
+    <td>0004</td> 
+    <td>Similar to <b>0003</b>, but without an automatic shut down setting.</td>
+  </tr>
+</table>
+
+
 
 <br>
 <br>
