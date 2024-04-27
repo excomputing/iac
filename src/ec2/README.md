@@ -2,11 +2,18 @@
 
 **Elastic Compute Container (EC2)**
 
-* [Introducing Launching, Listing, Terminating](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html)
-* [Launching Instances](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/run-instances.html)
-* [Amazon Machine Images](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html)
-
 <br>
+
+* [Launch](#launch)
+  * [Launch Template](#launch-template)
+  * [User Data](#user-data)
+* [Interacting](#interacting)
+  * [Connecting](#connecting)
+  * [Describing](#describing)
+  * [EC2, S3, ECR](#ec2-s3-ecr)
+* [Terminating](#terminating)
+* [EC2](#ec2-instance-connect-endpoint--ec2-instances)
+* [References](#references)
 
 
 ## Launch
@@ -205,6 +212,14 @@ List the machine's details via
 ```bash
 cat /etc/os-release
 ```
+
+<br>
+
+## References
+
+* [Introducing Launching, Listing, Terminating](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html)
+* [Launching Instances](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/run-instances.html)
+* [Amazon Machine Images](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html)
 
 <br>
 <br>
