@@ -44,14 +44,15 @@ sudo rm awscliv2.zip
 ```
 
 
-### Via SNAP
+### Via Snap
 
-https://snapcraft.io/install/aws-cli/ubuntu
+[About Snap](https://snapcraft.io/about) & [Snap Installations List](https://snapcraft.io/docs/quickstart-tour#list-installed-snaps-2)
 
-https://snapcraft.io/docs/quickstart-tour#list-installed-snaps-2
+* [Installing AWS CLI](https://snapcraft.io/install/aws-cli/ubuntu)
 
 
 <br>
+
 
 ## Uninstall
 
