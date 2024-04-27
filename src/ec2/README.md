@@ -16,6 +16,10 @@
 * [References](#references)
 
 
+<br>
+<br>
+
+
 ## Launch
 
 <br>
@@ -30,13 +34,13 @@ aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro
 The most efficient launch approach is
 
 ```shell
-aws ec2 run-instances --user-data file://0001/data.txt --launch-template LaunchTemplateId={launch.template.identier}
+aws ec2 run-instances --user-data file://{user.data.file} --launch-template LaunchTemplateId={launch.template.identier}
 ```
 
 The next sections describe
 
 * --launch-template
-* --user-data
+* --user-data: This directive reads from a `.txt` file.
 
 
 <br>
