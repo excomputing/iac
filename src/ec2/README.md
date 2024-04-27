@@ -134,7 +134,7 @@ ln -sf /usr/share/zoneinfo/GMT /etc/localtime
     <td></td>
   <tr>
     <td>0003</td> 
-    <td>Automatically shuts down  7 minutes after launch; study <a href="src/ec2/0003/data.txt">data.txt</a></td>
+    <td>Automatically shuts down  7 minutes after launch; study <a href="0003/data.txt">data.txt</a></td>
   <tr>
     <td>0004</td> 
     <td>Similar to <b>0003</b>, but without an automatic shut down setting.</td>
