@@ -142,11 +142,10 @@ aws ec2 describe-instances --profile {profile.name}
 
 ### EC2, S3, ECR
 
-Interacting with S3 & ECR via EC2 requires a **role** wherein EC2 requests services on our behalf and
+Interacting with Amazon <abbr title="Simple Storage Service">S3</abbr> & Amazon <abbr title="Elastic Contatiner Registry">ECR</abbr> via <abbr title="Elastic Compute Container">EC2</abbr> requires a **role** wherein <abbr title="Elastic Compute Container">EC2</abbr> requests services on our behalf **and**
 
 * A S3 (Simple Storage Service) permission policy is attached.
 * An ECR (Elastic Container Registry) permission [policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/security-iam-awsmanpol.html) is attached.
-
 
 <br>
 <br>
