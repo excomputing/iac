@@ -58,11 +58,7 @@ In the case of the latter, [the command](https://docs.aws.amazon.com/cli/latest/
 aws ec2 get-launch-template-data --instance-id {instance.identifier} --query "LaunchTemplateData" >> template.json
 ```
 
-creates a starting launch template named `template.json` via the instance identifier of an existing instance.  
-
-<br>
-
-Study the sample template [iac.json](0003/iac.json)
+creates a skeleton launch template named `template.json` via the instance identifier of an existing instance.  Study the sample template [iac.json](0003/iac.json), the variables therein are briefly explained below.
 
 <table style="width: 65%; border: 0; border-spacing: 5px; margin-left: 35px">
   <colgroup>
