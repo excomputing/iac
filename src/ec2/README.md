@@ -7,6 +7,7 @@
 * [Launch](#launch)
   * [Launch Template](#launch-template)
   * [User Data](#user-data)
+  * [Examples](#examples)
 * [Interacting](#interacting)
   * [Connecting](#connecting)
   * [Describing](#describing)
