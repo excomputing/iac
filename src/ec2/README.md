@@ -163,8 +163,6 @@ aws ec2 terminate-instances --instance-ids {instance.identifier} --profile {prof
 
 <br>
 
-[EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-instance-connect-endpoint.html)
-
 ### Security Groups 
 
 [Security Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/eice-security-groups.html)
@@ -178,10 +176,11 @@ aws ec2 terminate-instances --instance-ids {instance.identifier} --profile {prof
 
 #### Creating
 
+Creating an [EC2 Instance Connect Endpoint](https://docs.aws.amazon.com/cli/latest/reference/ec2/create-instance-connect-endpoint.html)
+
 ```bash
 aws ec2 create-instance-connect-endpoint --region eu-west-1 --subnet-id {subnet.identifier}
 ```
-
 
 #### Describing
 
