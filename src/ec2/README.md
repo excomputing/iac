@@ -33,7 +33,6 @@ The next sections describe
 
 
 <br>
-<br>
 
 ### Launch Template
 
@@ -82,7 +81,6 @@ aws ec2 delete-launch-template-versions --launch-template-id {launch.template.id
 ```
 
 <br>
-<br>
 
 ### User Data
 
@@ -109,7 +107,6 @@ ln -sf /usr/share/zoneinfo/GMT /etc/localtime
 
 ## Interacting
 
-<br>
 
 ### Connecting
 
@@ -125,7 +122,7 @@ Programmers may [connect to an instance](https://docs.aws.amazon.com/AWSEC2/late
 
 wherein `dns` denotes [domain name system](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html); [more about protocol addresses](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-ip-addressing.html).  Ensure you have a [key pair pem (privacy enhanced mail) certificate file](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html).
 
-<br>
+
 
 ### Describing
 
@@ -135,7 +132,6 @@ Describe an account's EC2 instances
 aws ec2 describe-instances --profile {profile.name}
 ```
 
-<br>
 
 ### EC2, S3, ECR
 
