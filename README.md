@@ -57,13 +57,13 @@ https://snapcraft.io/docs/quickstart-tour#list-installed-snaps-2
 
 [Uninstall](https://docs.aws.amazon.com/cli/latest/userguide/uninstall.html)
 
-Fetch the --bin-dir directory
+Fetch the **--bin-dir** directory
 
 ```bash
 which aws
 ```
 
-Within Linux, it is probably `/usr/local/bin`.  Additionally,  determine the --install-dir
+Within Linux, it is probably `/usr/local/bin`; the directory path of `/usr/local/bin/aws`.  Additionally,  determine the **--install-dir**
 
 ```bash
 ls -l /usr/local/bin/aws
