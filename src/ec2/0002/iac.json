@@ -1,0 +1,87 @@
+{
+    "EbsOptimized": true,
+    "IamInstanceProfile": {
+        "Arn": "{amazon.resource.name}"
+    },
+    "BlockDeviceMappings": [
+        {
+            "DeviceName": "/dev/xvda",
+            "Ebs": {
+                "Encrypted": false,
+                "DeleteOnTermination": true,
+                "Iops": 3000,
+                "VolumeSize": 65,
+                "VolumeType": "gp3",
+                "Throughput": 125
+            }
+        }
+    ],
+    "NetworkInterfaces": [
+        {
+            "AssociatePublicIpAddress": true,
+            "DeleteOnTermination": true,
+            "Description": "",
+            "DeviceIndex": 0,
+            "Groups": [
+                "{security.group.identifier}"
+            ],
+            "InterfaceType": "interface",
+            "Ipv6Addresses": [],
+            "SubnetId": "{subnet.identifier}",
+            "NetworkCardIndex": 0
+        }
+    ],
+    "ImageId": "ami-0a654345356bc5a02",
+    "InstanceType": "g4dn.xlarge",
+    "KeyName": "{key.pair.name}",
+    "Monitoring": {
+        "Enabled": false
+    },
+    "Placement": {
+        "AvailabilityZone": "{availability.zone}",
+        "GroupName": "",
+        "Tenancy": "default"
+    },
+    "DisableApiTermination": false,
+    "InstanceInitiatedShutdownBehavior": "terminate",
+    "TagSpecifications": [
+        {
+            "ResourceType": "instance",
+            "Tags": [
+                {
+                    "Key": "function",
+                    "Value": "graphics processing unit sandbox"
+                }
+            ]
+        }
+    ],
+    "CpuOptions": {
+        "CoreCount": 2,
+        "ThreadsPerCore": 2
+    },
+    "CapacityReservationSpecification": {
+        "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+        "Configured": false
+    },
+    "MetadataOptions": {
+        "HttpTokens": "optional",
+        "HttpPutResponseHopLimit": 1,
+        "HttpEndpoint": "enabled",
+        "HttpProtocolIpv6": "disabled",
+        "InstanceMetadataTags": "disabled"
+    },
+    "EnclaveOptions": {
+        "Enabled": false
+    },
+    "PrivateDnsNameOptions": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": false,
+        "EnableResourceNameDnsAAAARecord": false
+    },
+    "MaintenanceOptions": {
+        "AutoRecovery": "default"
+    },
+    "DisableApiStop": false
+}
