@@ -149,11 +149,11 @@ ln -sf /usr/share/zoneinfo/GMT /etc/localtime
   <thead><tr style="text-align: left"><th>example</th><th>notes</th></tr></thead>
   <tr>
     <td>0001</td> 
-    <td></td>
+    <td>TensorFlow GPU (Graphics Processing Unit) Sandbox</td>
   <tr>
   <tr>
     <td>0002</td> 
-    <td></td>
+    <td>PyTorch GPU (Graphics Processing Unit) Sandbox</td>
   <tr>
     <td>0003</td> 
     <td>Automatically shuts down $13$ minutes after launch; study <a href="0003/data.txt">data.txt</a>.  It only has a public subnet.</td>
