@@ -14,3 +14,6 @@ ln -sf /usr/share/zoneinfo/GMT /etc/localtime
 
 # Terminate
 sudo shutdown -h +19
+
+# `conda activate` configuration
+conda init bash
