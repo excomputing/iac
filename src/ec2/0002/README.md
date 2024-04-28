@@ -9,20 +9,15 @@ It's prudent to investigate the features of a GPU (Graphics Processing Unit) ena
 In the case of this *0002* example:
 
 * Image Identifier: ami-0a654345356bc5a02 
-  * Tag: Deep Learning OSS (Open Source Software) NVIDIA Driver <abbr title="Amazon Machine Image">AMI</abbr> <abbr title="Graphics Processing Unit">GPU</abbr>, PyTorch 2.2.0 (Amazon Linux 2) 20240420
+  * Tag: Deep Learning OSS (Open Source Software) NVIDIA Driver <abbr title="Amazon Machine Image">AMI</abbr> (Amazon Machine Image) <abbr title="Graphics Processing Unit">GPU</abbr> (Graphics Processing Unit), PyTorch 2.2.0 (Amazon Linux 2) 20240420
   * [About Amazon Deep Learning Images](https://aws.amazon.com/releasenotes/aws-deep-learning-base-ami-amazon-linux-2/)
+
 * Instance Type: g4dn.xlarge
   * [vCPU](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) $\rightarrow$ 4, CPU Core $\rightarrow$ 2, Threads per Core $\rightarrow$ 2
   * [G4](https://aws.amazon.com/ec2/instance-types/g4/#:~:text=Product%20Details,-Instance%20Size)
   * [Instance Types](https://docs.aws.amazon.com/ec2/latest/instancetypes/ac.html)
 
-
-[Beware of the values of](iac.json)
-
-* ImageId
-* InstanceType
-* CpuOptions.CoreCount
-* CpuOptions.ThreadsPerCore
+Beware of the values of *ImageId*, *InstanceType*, *CpuOptions.CoreCount*, and *CpuOptions.ThreadsPerCore* in [iac.json](iac.json).
 
 <br>
 <br>
