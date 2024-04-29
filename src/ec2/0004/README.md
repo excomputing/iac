@@ -1,3 +1,18 @@
+<br>
+
+## EC2 Machines & Private Access
+
+Interacting with EC2 (Elastic Compute Cloud) machines via private tunnels, i.e., without a public internet protocol version 4 (IPv4) address, or similar.  The example herein achieves this via <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-with-ec2-instance-connect-endpoint.html" target="_blank">EICE</a> (EC2 Instance Connect Endpoint) instead.
+
+
+|method|cost per hour<br> united states dollar|
+|:----------|:-----|
+|Public IPv4|0.0005|
+|EICE|0|
+
+
+<br>
+
 
 ### Building a machine launch template
 
@@ -9,24 +24,27 @@ bash src/ec2/0004/build.sh
 
 For this example, ensure the subnet is a private subnet.  Visit Amazon's pages for more details about <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-launch-template.html">launch templates</a>.
 
+
 <br>
 
 
 ### Before launching
 
-A simple option for accessing an instance that only has a private subnet, is to associate the private subnet with an EICE ().  The relevant command is 
+A simple option for accessing an instance that only has a private subnet, is to associate the private subnet with an <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connect-with-ec2-instance-connect-endpoint.html" target="_blank">EICE</a> (EC2 Instance Connect Endpoint); <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-ec2-instance-connect-endpoints.html#create-eice-cli" target="_blank">more</a>.  The relevant command is 
 
 ```bash
 aws ec2 create-instance-connect-endpoint --subnet-id {subnet.identifier}
 ```
 
-It creates the endpoint and associates it with a subnet in question.  Details of endpoints, and their associated subnets, are retrivable via
+It creates the endpoint, and associates it with a subnet in question.  Details of endpoints, and their associated subnets, are retrivable via
 
 ```bash
 aws ec2 describe-instance-connect-endpoints --region {region.code}
 ```
 
+
 <br>
+
 
 ### Launching a machine
 
@@ -43,7 +61,9 @@ ssh -i machines.pem ec2-user@{private.internet.protocol} -o \
     ProxyCommand='aws ec2-instance-connect open-tunnel --instance-id {instance.identifier}'
 ```
 
+
 <br>
+
 
 ### Features
 
