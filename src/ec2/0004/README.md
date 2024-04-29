@@ -1,13 +1,13 @@
 
 ### Building a machine launch template
 
-The templating buildng script depends on the launch template data [iac.json](iac.json).  Beware of the variables therein, e.g., {amazon.resource.name}, {subnet.identifier}, etc.  Edit the variables accrdingly before running
+The templating buildng script depends on the launch template data [iac.json](iac.json).  Beware of the variables therein, e.g., {amazon.resource.name}, {subnet.identifier}, etc.  Edit the variables accordingly before running
 
 ```bash
 bash src/ec2/0004/build.sh
 ```
 
-For this example, ensure the subnet is a private subnet.
+For this example, ensure the subnet is a private subnet.  Visit Amazon's pages for more details about <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/create-launch-template.html">launch templates</a>.
 
 <br>
 
@@ -47,7 +47,9 @@ ssh -i machines.pem ec2-user@{private.internet.protocol} -o \
 
 ### Features
 
-Note, this example is designed to shut down after 13 minutes; study [data.txt](data.txt).  After shutting down, the machine is terminated; study the network interfaces section of [iac](iac.json), it includes the parameter `DeleteOnTermination`.
+Note, this example is designed to shut down after 13 minutes; study [data.txt](data.txt).  After shutting down, the machine is terminated via the *instance shutdown behaviour* setting of [iac](iac.json); parameter `InstanceInitiatedShutdownBehavior`.
+
+Additionally, the <a href="https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html" target="_blank">Elastic Block Store (EBS)</a> volume is deleted on termination; study the network interfaces section of [iac](iac.json), it includes the parameter `DeleteOnTermination`.
 
 ```json
 "NetworkInterfaces": [
@@ -66,8 +68,6 @@ Note, this example is designed to shut down after 13 minutes; study [data.txt](d
         }
     ]
 ```
-
-
 
 <br>
 <br>
