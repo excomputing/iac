@@ -18,7 +18,7 @@
     ],
     "NetworkInterfaces": [
         {
-            "AssociatePublicIpAddress": true,
+            "AssociatePublicIpAddress": false,
             "DeleteOnTermination": true,
             "Description": "",
             "DeviceIndex": 0,
