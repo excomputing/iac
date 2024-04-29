@@ -1,5 +1,5 @@
 {
-    "EbsOptimized": false,
+    "EbsOptimized": true,
     "IamInstanceProfile": {
         "Arn": "{amazon.resource.name}"
     },
@@ -10,7 +10,7 @@
                 "Encrypted": false,
                 "DeleteOnTermination": true,
                 "Iops": 3000,
-                "VolumeSize": 29,
+                "VolumeSize": 65,
                 "VolumeType": "gp3",
                 "Throughput": 125
             }
@@ -31,8 +31,8 @@
             "NetworkCardIndex": 0
         }
     ],
-    "ImageId": "{amazon.machine.image.identifier}",
-    "InstanceType": "{instance.type.code}",
+    "ImageId": "ami-0a654345356bc5a02",
+    "InstanceType": "g4dn.xlarge",
     "KeyName": "{key.pair.name}",
     "Monitoring": {
         "Enabled": false
@@ -49,14 +49,15 @@
             "ResourceType": "instance",
             "Tags": [
                 {
-                    "Key": "cost",
-                    "Value": "free tier"
+                    "Key": "function",
+                    "Value": "graphics processing unit sandbox"
                 }
             ]
         }
     ],
-    "CreditSpecification": {
-        "CpuCredits": "standard"
+    "CpuOptions": {
+        "CoreCount": 2,
+        "ThreadsPerCore": 2
     },
     "CapacityReservationSpecification": {
         "CapacityReservationPreference": "open"
@@ -65,8 +66,8 @@
         "Configured": false
     },
     "MetadataOptions": {
-        "HttpTokens": "required",
-        "HttpPutResponseHopLimit": 2,
+        "HttpTokens": "optional",
+        "HttpPutResponseHopLimit": 1,
         "HttpEndpoint": "enabled",
         "HttpProtocolIpv6": "disabled",
         "InstanceMetadataTags": "disabled"

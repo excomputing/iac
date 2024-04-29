@@ -8,9 +8,9 @@ sudo service docker start
 # In order to use docker commands without 'sudo'
 sudo usermod -a -G docker ec2-user
 
-# time
+# Time
 echo '"ZONE=\"GMT\""' > /etc/sysconfig/clock
 ln -sf /usr/share/zoneinfo/GMT /etc/localtime
 
 # Terminate
-sudo shutdown -h +19
+sudo shutdown -h +13

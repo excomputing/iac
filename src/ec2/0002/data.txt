@@ -14,3 +14,8 @@ ln -sf /usr/share/zoneinfo/GMT /etc/localtime
 
 # Terminate
 sudo shutdown -h +19
+
+# configuration
+#   conda init bash
+#   source activate base or source activate pytorch
+source activate pytorch
