@@ -1,6 +1,6 @@
 <br>
 
-Elastic Container Registry (ECR)
+# Elastic Container Registry (ECR)
 
 <br>
 
@@ -14,7 +14,8 @@ About [ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.h
 The [public gallery](https://gallery.ecr.aws) ...
 
 ```shell
-aws ecr-public get-login-password --region {region.code} | docker login --username AWS --password-stdin public.ecr.aws
+aws ecr-public get-login-password --region {region.code} | docker login --username AWS \
+     --password-stdin public.ecr.aws
 ```
 
 
@@ -72,13 +73,15 @@ Whereby
 Next, log into Amazon ECR Registry
 
 ```shell
-aws ecr get-login-password --region {region.code} | docker login --username AWS --password-stdin {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com
+aws ecr get-login-password --region {region.code} | docker login --username AWS \
+     --password-stdin {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com
 ```
 
 Finally, push the image into an Amazon ECR repository
 
 ```shell
-docker push {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{image.tag}
+docker push \
+     {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{image.tag}
 ```
 
 <h4><b>Deleting</b></h4>
@@ -122,7 +125,8 @@ Interactions via Amazon CLI (Command Line Interface).
 Initially, [login via](https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry_auth.html)
 
 ```shell
-aws ecr get-login-password --region {region.code} | docker login --username AWS --password-stdin {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com
+aws ecr get-login-password --region {region.code} | docker login --username AWS \
+     --password-stdin {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com
 ```
 
 Note that the login name of the user is **always AWS**.
@@ -132,7 +136,8 @@ Note that the login name of the user is **always AWS**.
 **Pull** an image via the command
 
 ```shell
-docker pull {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{image.tag}
+docker pull \
+     {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{image.tag}
 ```
 
 <br>
@@ -142,9 +147,12 @@ docker pull {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{reposi
 Within an EC2 instance, the `sudo` key might be required, i.e.,
 
 ```shell
-aws ecr get-login-password --region {region.code} | sudo docker login --username AWS --password-stdin {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com
-sudo docker pull {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{image.tag}
-sudo docker run {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{image.tag}
+aws ecr get-login-password --region {region.code} | sudo docker login --username AWS \ 
+     --password-stdin {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com
+sudo docker pull \
+     {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{image.tag}
+sudo docker run \
+     {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{image.tag}
 ```
 
 **However**, if an EC2 machine is launched with a user data file that ensures docker usage without `sudo`, e.g.,
@@ -156,8 +164,10 @@ Then a `sudo` key will not be required for docker commands, i.e.,
 ```shell
 aws ecr get-login-password --region {region.code} | docker login --username AWS \
     --password-stdin {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com
-docker pull {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{tag.name}
-docker run {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{tag.name}
+docker pull \
+     {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{tag.name}
+docker run \
+     {aws.account.identifier}.dkr.ecr.{region.code}.amazonaws.com/{repository.name}:{tag.name}
 ```
 
 
