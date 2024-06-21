@@ -11,7 +11,7 @@ About [ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.h
 
 ## Public
 
-The [public gallery](https://gallery.ecr.aws) ...
+The [public gallery](https://gallery.ecr.aws)
 
 ```shell
 aws ecr-public get-login-password --region {region.code} | docker login --username AWS \
@@ -36,10 +36,16 @@ Create a repository via
 aws ecr create-repository --repository-name {repository.name} --region {region.code}
 ```
 
-For example
+There is a parameters script option.  The script structure is available via
+
+```shell
+aws ecr create-repository --generate-cli-skeleton
+```
+
+Hence, an example
 
 ```bash
-aws ecr create-repository --repository-name trees --region ca-west-1
+aws ecr create-repository --repository-name patterns --region eu-west-1 --cli-input-json file://src/ecr/catalogue.json
 ```
 
 Always deliver images via a version control system, e.g. GitHub; study the this <a href="https://github.com/enqueter/pollutants/blob/bc73be88345ccb36864a9721dac4708bbf6da281/.github/workflows/main.yml#L179">workflow code</a>, which automatically delivers an image to ECR via GitHub Actions directives.
