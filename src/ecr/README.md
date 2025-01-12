@@ -188,7 +188,7 @@ Deleting one or more images via their tags
 ```shell
 aws ecr batch-delete-image \
      --repository-name {repository.name} \
-     --image-ids imageTag={tag.name} imageTag={tag.name}
+          --image-ids imageTag={tag.name} imageTag={tag.name}
 ```
 
 <br>
@@ -198,7 +198,7 @@ Deleting a single image at a time via the image's _image digest_
 ```shell
 aws ecr batch-delete-image \
      --repository-name {repository.name} \
-     --image-ids imageDigest={image.digest}
+          --image-ids imageDigest={image.digest}
 ```
 
 <br>
@@ -208,7 +208,7 @@ Deleting multiple images at a time via their _image digest_
 ```shell
 aws ecr batch-delete-image \
      --repository-name {repository.name} \
-     --image-ids imageDigest={image.digest} imageDigest={image.digest}
+          --image-ids imageDigest={image.digest} imageDigest={image.digest}
 ```
 
 
