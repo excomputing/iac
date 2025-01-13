@@ -2,15 +2,7 @@
   "tags" : [
     {
       "Key" : "description", 
-      "Value" : "A repository for illustrative images."
-    },
-    {
-      "Key": "focus", 
-      "Value": "For images aiding modelling projects."
-    },
-    {
-      "Key": "usage", 
-      "Value": "For team members and colleagues."
+      "Value" : "A repository for the excomputing project."
     }
   ]
 }

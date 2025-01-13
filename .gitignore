@@ -38,3 +38,13 @@ terraform.rc
 
 # Private
 *.private.*
+
+# Schedules
+schedule.json
+schedule.yaml
+
+# Exclude
+*.json
+ecs/
+steps/
+batch/
