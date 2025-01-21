@@ -6,7 +6,7 @@
 
 ### Amazon S3 & Applications
 
-Within an application interaction with Amazon S3 (Simple Storage Service) is via its [software development kits](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingAWSSDK.html).  The Python software development kit (SDK) is [Boto 3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html), whilst the Scala SDK is the [Java SDK](https://sdk.amazonaws.com/java/api/latest/).
+Within an application, interaction with Amazon S3 (Simple Storage Service) is via its [software development kits](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingAWSSDK.html).  The Python software development kit (SDK) is [Boto 3](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html), whilst the Scala SDK is the [Java SDK](https://sdk.amazonaws.com/java/api/latest/).
 
 
 <br>
