@@ -45,6 +45,4 @@ schedule.yaml
 
 # Exclude
 *.json
-ecs/
-steps/
 batch/
