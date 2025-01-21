@@ -7,7 +7,7 @@ This script deletes a cloud watch log group
 comment
 
 # Path
-path=file://src/logs
+path=file://compute/sequence/ecs/logs
 
 # Delete Log Group
 aws logs delete-log-group --cli-input-json $path/delete.json
